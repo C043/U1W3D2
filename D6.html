@@ -121,7 +121,15 @@
        Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
       */
 
-      const changeUrls = function () {};
+      const changeUrls = function () {
+        const a = document.getElementsByTagName("a");
+        for (let i = 0; i < a.length - 1; i++) {
+          const element = a[i];
+          element.href = "https://www.google.com";
+        }
+      };
+
+      changeUrls();
 
       /* ESERCIZIO 5
        Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata

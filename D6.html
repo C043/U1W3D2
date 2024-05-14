@@ -126,8 +126,8 @@
              */
 
       const changeUrls = function () {
-        const a = document.getElementsByTagName("a");
-        for (let i = 0; i < a.length - 1; i++) {
+        const a = document.querySelectorAll("a:not(footer a)");
+        for (let i = 0; i < a.length; i++) {
           const element = a[i];
           element.href = "https://www.google.com";
         }

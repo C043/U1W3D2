@@ -236,10 +236,11 @@
         const border1 = document.querySelectorAll("table th");
         const td = document.querySelectorAll("tr > td");
         for (let i = 0; i < td.length; i += 4) {
-          let randomSrc = `https://picsum.photos/200?random=${i}`;
+          let randomSrc = `https://picsum.photos/100?random=${i}`;
           const element = td[i];
           const img = document.createElement("img");
           img.src = randomSrc;
+          img.style.width = "100%";
           element.appendChild(img);
         }
         for (let i = 1; i < td.length; i += 4) {
@@ -296,6 +297,8 @@
           }
           element.innerText = randomPrices[i];
         }
+        table.style.width = "50%";
+        table.style.textAlign = "center";
         for (let i = 0; i < border.length; i++) {
           const element = border[i];
           element.style.border = "1px solid black";

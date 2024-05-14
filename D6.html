@@ -35,7 +35,7 @@
 
   <body>
     <div>
-      <h1>Questo è il titolo della pagina</h1>
+      <h1 onclick="makeItClickable()">Questo è il titolo della pagina</h1>
       <h2>Questo è il sottotitolo della pagina</h2>
     </div>
 
@@ -181,7 +181,12 @@
        Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
       */
 
-      const makeItClickable = function () {};
+      const makeItClickable = function () {
+        const h1 = document.getElementsByTagName("h1")[0];
+        let h1Text = h1.innerText;
+        const h1Replace = h1Text.replace(/.$/, "");
+        h1.innerText = h1Replace;
+      };
 
       /* ESERCIZIO 10
        Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
